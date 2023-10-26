@@ -384,9 +384,7 @@ func (typ *goStructType) WriteDefinition(w io.Writer, g *generator) error {
 	for _, field := range typ.Fields {
 		writeDescription(w, field.Description)
 		jsonTag := `"` + field.JSONName
-		if field.Omitempty {
-			jsonTag += ",omitempty"
-		}
+		jsonTag += ",omitempty"
 		jsonTag += `"`
 		if field.NeedsMarshaling() {
 			// certain types are handled in our (Un)MarshalJSON (see below)
