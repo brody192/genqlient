@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Khan/genqlient/internal/integration"
+	"github.com/brody192/genqlient/internal/integration"
 )
 
 func TestGenerateExample(t *testing.T) {
